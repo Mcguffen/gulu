@@ -10,14 +10,33 @@
         *{margin:0;padding:0;box-sizing: border-box;}
 
         :root{
+            /*按钮高度*/
             --button-height: 32px;
+            /*字体大小*/
             --font-size: 14px;
+            /*按钮的背景颜色*/
+            --button-bg:white;
+            /*按钮被按下的背景颜色*/
+            --button-active-bg:#eee;
+            /*圆角*/
+            --border-radius: 4px;
+            /*字体颜色*/
+            ==color:#333;
+            /*字体大小*/
+            --border-color:#999;
+            --border-color-hover:#666;
+
         }
     </style>
     <style>
         .g-button{
             font-size: var(--font-size);
             height: var(--button-height);
+            padding: 0 1em;/*按钮不设置宽度，使用padding左右1em来控制*/
+            font: inherit;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color);
+            background: var(--button-bg);
         }
     </style>
 </head>
