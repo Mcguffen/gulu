@@ -14,7 +14,19 @@
 
 <script>
 export default {
-  props: ['icon', 'iconPosition']
+  // props: ['icon', 'iconPosition']
+  props: {
+    icon: {},
+    // 给默认值 防止出现icon-undifined
+    iconPosition:{
+      type: String,
+      default: 'left',
+      // 属性检查器，防止用户瞎传数据
+      validator(value){
+        return !(value !== 'left' && value !== 'right');
+      }
+    }
+  }
 }
 </script>
 
