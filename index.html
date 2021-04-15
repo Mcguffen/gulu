@@ -16,12 +16,12 @@
             --font-size: 14px;
             /*按钮的背景颜色*/
             --button-bg:white;
-            /*按钮被按下的背景颜色*/
+            /*按钮被按下的*/
             --button-active-bg:#eee;
             /*圆角*/
             --border-radius: 4px;
             /*字体颜色*/
-            ==color:#333;
+            --color:#333;
             /*字体大小*/
             --border-color:#999;
             --border-color-hover:#666;
@@ -62,16 +62,12 @@
 <body>
     <div id="app">
         <g-button></g-button>
-        {{message}}
     </div>
     <script src="./node_modules/vue/dist/vue.min.js"></script>
     <script src="./button.js"></script>
     <script>
         new Vue({
             el: '#app',
-            data:{
-                message: 'hello'
-            }
         })
     </script>
 </body>
