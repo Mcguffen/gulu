@@ -7,45 +7,65 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>gulu</title>
     <style>
-        *{margin:0;padding:0;box-sizing: border-box;}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        :root{
+        :root {
             /*按钮高度*/
             --button-height: 32px;
             /*字体大小*/
             --font-size: 14px;
             /*按钮的背景颜色*/
-            --button-bg:white;
+            --button-bg: white;
             /*按钮被按下的*/
-            --button-active-bg:#eee;
+            --button-active-bg: #eee;
             /*圆角*/
             --border-radius: 4px;
             /*字体颜色*/
-            --color:#333;
+            --color: #333;
             /*字体大小*/
-            --border-color:#999;
-            --border-color-hover:#666;
+            --border-color: #999;
+            --border-color-hover: #666;
 
         }
+
         /*为了看清按钮效果设置下app样式*/
-        #app{
+        #app {
             margin: 20px;
         }
+
         /*设置下默认字体大小*/
-        body{
+        body {
             font-size: var(--font-size);
 
         }
-    </style>
-    <style>
 
+    </style>
+
+    <style>
+        .icon {
+            width: 1em;
+            height: 1em;
+        }
 
     </style>
 </head>
 <body>
-    <div id="app">
-        <g-button></g-button>
-    </div>
-    <script src="./src/app.js"></script>
+<div id="app">
+    <g-button icon='settings'>
+        按钮
+    </g-button>
+    <g-button icon='settings' icon-position="left">
+        按钮
+    </g-button>
+    <g-button icon='settings' icon-position="right">
+        按钮
+    </g-button>
+</div>
+<script src="./src/app.js"></script>
+<script src="//at.alicdn.com/t/font_2489679_4cznevj3dyu.js"></script>
 </body>
 </html>
