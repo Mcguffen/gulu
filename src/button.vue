@@ -1,7 +1,7 @@
 <template>
-  <button class="g-button" :class="{[`icon-${iconPosition}`]:true}">
-    <g-icon class="icon" v-if="icon" :name="icon"></g-icon>
-    <g-icon class="loading" name="loading"></g-icon>
+  <button class="g-button" :class="{[`icon-${iconPosition}`]:true}" @click="$emit('click')">
+    <g-icon class="icon" v-if="icon && !loading" :name="icon"></g-icon>
+    <g-icon class="loading icon" v-if="loading" name="loading"></g-icon>
     <div class="content">
       <slot></slot>
     </div>
@@ -13,6 +13,10 @@ export default {
   // props: ['icon', 'iconPosition']
   props: {
     icon: {},
+    loading: {
+      type: Boolean,
+      default: false
+    },
     // 给默认值 防止出现icon-undifined
     iconPosition: {
       type: String,
@@ -43,9 +47,11 @@ export default {
   border-radius: var(--border-radius);
   border: 1px solid var(--border-color);
   background: var(--button-bg);
+  //内部居中
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  //和外部对齐
   vertical-align: middle;
   /* &来代表当前的选择器 */
   &:hover {
