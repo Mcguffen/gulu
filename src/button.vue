@@ -1,5 +1,5 @@
 <template>
-  <button class="g-button" :class="{[`icon-${iconPosition}`]:true}" @click="$emit('clic')">
+  <button class="g-button" :class="{[`icon-${iconPosition}`]:true}" @click="$emit('click')">
     <g-icon class="icon" v-if="icon && !loading" :name="icon"></g-icon>
     <g-icon class="loading icon" v-if="loading" name="loading"></g-icon>
     <div class="content">
@@ -8,7 +8,7 @@
   </button>
 </template>
 
-<script>k
+<script>
 // 在button里全局注册icon 最好不要这样做哦 我们使用局部组件
 // import Vue from 'vue'
 // import Icon from './icon'
