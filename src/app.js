@@ -22,8 +22,12 @@ new Vue({
 })
 // 引入chai
 import chai from 'chai'
-
 const expect = chai.expect
+
+// 引入chai-spies来测试第五个测试用例
+import spies from 'chai-spies'
+chai.use(spies)
+
 // 单元测试
 {
     // 动态生成一个按钮 通过下明js将按钮写到页面中去。
@@ -127,12 +131,14 @@ const expect = chai.expect
         }
     )
     vm.$mount()
-    vm.$on('click',function (){
-        console.log(1)
+    let spy = chai.spy(function (){
+        console.log('回调函数被触发')
     })
+    vm.$on('click',spy)
     let button = vm.$el
     button.click()
-    // 期望gButton的click函数执行
+    expect(spy).to.have.been.called()
+    // 期望gButton的click回调函数执行 需要用到一个库 chai-spies
     // button.$el.remove()
     // button.$destroy()
 }
