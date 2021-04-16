@@ -9,7 +9,18 @@
 </template>
 
 <script>
+// 在button里全局注册icon 最好不要这样做哦 我们使用局部组件
+// import Vue from 'vue'
+// import Icon from './icon'
+// Vue.component('g-icon',Icon)
+
+
+import Icon from './icon'
 export default {
+  // 局部注册组件
+  components: {
+    'g-icon': Icon
+  },
   // props: ['icon', 'iconPosition']
   props: {
     icon: {},

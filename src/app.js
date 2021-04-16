@@ -3,10 +3,10 @@ import Button from './button'
 import Icon from './icon'
 import ButtonGroup from './button-group'
 
+// 全局注册组件不推荐
 // Vue.component('g-button', Button)
-// 全局注册
-Vue.component('g-icon', Icon)
-Vue.component('g-button-group', ButtonGroup)
+//Vue.component('g-icon', Icon)
+// Vue.component('g-button-group', ButtonGroup)
 
 new Vue({
     el: '#app',
@@ -14,10 +14,11 @@ new Vue({
         loading1: false,
         loading2: false,
     },
-    // 局部注册
+    // 局部注册组件推荐
     components: {
         "g-button": Button,
-        // "g-icon": Icon
+        "g-icon": Icon,
+        "g-button-group": ButtonGroup
     }
 })
 // 引入chai
