@@ -136,7 +136,7 @@ try{
         )
         vm.$mount()
         let spy = chai.spy(function (){
-            console.log('回调函数被触发')
+            // console.log('spy回调函数被触发')
         })
         vm.$on('click',spy)
         let button = vm.$el

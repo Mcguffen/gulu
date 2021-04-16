@@ -3,9 +3,15 @@ import Vue from 'vue'
 import Button from '../src/button'
 Vue.config.productionTip = false
 Vue.config.devtools = false
+
+// BDD 行为驱动测试
 describe('Button', () => {
     it('存在.', () => {
-        expect(Button).to.be.ok
+        // 非fasle值： undifined null 0 ''
+        // expect(Button).to.be.ok
+        // 或者写成下面
+        expect(Button).to.be.exist
+
     })
     it('可以设置 icon.', () => {
         const Constructor = Vue.extend(Button)
@@ -68,6 +74,7 @@ describe('Button', () => {
             }
         }).$mount()
         const callback = sinon.fake();
+        // console.log('fake()回调函数被调用')
         vm.$on('click', callback)
         vm.$el.click()
         expect(callback).to.have.been.called
