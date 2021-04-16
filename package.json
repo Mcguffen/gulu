@@ -1,8 +1,8 @@
 {
   "name": "gulu-0.0.1-4-16",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Vue UI框架",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel index.html",
