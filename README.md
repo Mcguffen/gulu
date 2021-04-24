@@ -2,7 +2,9 @@
 
 作者：Mcguffen
 
-## install
+## 介绍
+## 开始使用
+### 安装
 ```
 npm i 包名
 ```
@@ -15,7 +17,7 @@ npm i 包名
 import '包名/dist/index.css'
 ```
 - 引入颜色样式
-引入下面的css
+  引入下面的css
 ``` css
         * {
             margin: 0;
@@ -42,3 +44,11 @@ import '包名/dist/index.css'
 
         }
 ```
+## 文档
+## 提问
+## 变更记录
+## 联系方式
+## 贡献代码
+
+
+
