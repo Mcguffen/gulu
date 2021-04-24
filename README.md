@@ -1,5 +1,5 @@
 # gulu 一个Vue UI 组件
-
+[![Build Status](https://www.travis-ci.org/Mcguffen/gulu.svg?branch=master)](https://www.travis-ci.org/Mcguffen/gulu)
 作者：Mcguffen
 
 ## 介绍
