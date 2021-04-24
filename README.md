@@ -68,10 +68,7 @@ npm i -S gulu
     }
    
    ```
-4. 引入 svg symbols
-```
-<script src="//at.alicdn.com/t/font_2489679_wi5lhp0suw.js"></script>
-```
+
 ## 文档
 ## 提问
 ## 变更记录
