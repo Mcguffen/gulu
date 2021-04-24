@@ -13,6 +13,7 @@ new Vue({
     data: {
         loading1: false,
         loading2: false,
+        message: 'hi'
     },
     // 局部注册组件推荐
     components: {
