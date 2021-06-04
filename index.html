@@ -57,9 +57,17 @@
             background-color: grey;
             border: 1px solid red;
         }
-        .demo1{
-            border: 1px solid #666;
-            min-height: 100px;
+        .sider{
+            background-color: #333;
+            width: 200px;
+        }
+        .header{
+            background-color: #999;
+            height: 100px;
+        }
+        .footer{
+            background-color: #ccc;
+            height: 50px;
         }
     </style>
 </head>
@@ -123,14 +131,16 @@
     <br>
     <!--    layout布局-->
     <g-layout>
-        <g-header class="demo1">header</g-header>
+        <g-sider>sider</g-sider>
         <g-layout>
-            <g-sider class="demo1">sider</g-sider>
-            <g-content class="demo1">content</g-content>
+            <g-header></g-header>
+            <g-content></g-content>
+            <g-footer></g-footer>
         </g-layout>
-        <g-content class="demo1">content</g-content>
-        <g-footer class="demo1">footer</g-footer>
     </g-layout>
+    <br>
+    <!--    toast-->
+    <g-button @click="showToast">click me</g-button>
 </div>
 <script src="./src/app.js"></script>
 </body>
