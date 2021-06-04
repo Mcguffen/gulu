@@ -10,7 +10,7 @@ export default {
   name: 'GuluButtonGroup',
   mounted() {
     for(let node of this.$el.children){
-      console.log(node)
+      // console.log(node)
       name = node.nodeName.toLowerCase()
       if( name !== 'button'){
         console.warn(`g-button-group 的子元素应该都是button，但是你写的是${name}`)

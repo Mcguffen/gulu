@@ -1,5 +1,6 @@
 <template>
-  <div class="tabs-item" :class="classes" @click="onClick">
+  <div class="tabs-item" :class="classes" @click="onClick"
+       :data-name="name">
     <slot></slot>
   </div>
 </template>
@@ -24,14 +25,17 @@ export  default {
     }
   },
   created() {
-    this.eventBus.$on('update:selected',(name)=>{
-      this.active = name === this.name;
-    })
+    if(this.eventBus){
+      this.eventBus.$on('update:selected',(name)=>{
+        this.active = name === this.name;
+      })
+    }
   },
   methods:{
     onClick(){
       if(this.disabled){return }
       this.eventBus.$emit('update:selected',this.name,this)
+      this.$emit('click',this)
     }
   },
   computed:{
@@ -61,7 +65,8 @@ $disabled-text-color:grey;
     font-weight: bold;
   }
   &.disabled{
-    color:$disabled-text-color
+    color:$disabled-text-color;
+    cursor: not-allowed;
   }
 }
 </style>
