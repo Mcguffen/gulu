@@ -38,6 +38,7 @@ $blue:blue;
   justify-content: flex-start;
   align-items: center;
   position: relative;
+  border-bottom: 1px solid #ddd;
   >.line{
     position: absolute;
     bottom: 0;
@@ -46,6 +47,10 @@ $blue:blue;
   }
   >.actions-wrapper{
     margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
   }
 }
 </style>
