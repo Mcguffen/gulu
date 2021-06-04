@@ -30,7 +30,7 @@ export  default {
   },
   methods:{
     xxx(){
-      this.eventBus.$emit('update:selected',this.name)
+      this.eventBus.$emit('update:selected',this.name,this)
     }
   },
   computed:{
@@ -45,11 +45,17 @@ export  default {
 
 
 <style lang="scss" scoped>
+$blue:blue;
 .tabs-item{
+  height: 100%;
   flex-shrink: 0;
   padding: 0 1em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
   &.active{
-    background-color: red;
+    color:$blue;
+    font-weight: bold;
   }
 }
 </style>
