@@ -39,16 +39,16 @@ export default {
       type: Boolean,
       default: false
     },
-    position:{
-      type:String,
-      default:'top',
-      validator(value){
-        return ['top','button','middle'].indexOf(value)>=0
+    position: {
+      type: String,
+      default: 'top',
+      validator(value) {
+        return ['top', 'button', 'middle'].indexOf(value) >= 0
       }
     }
   },
-  computed:{
-    toastClasses(){
+  computed: {
+    toastClasses() {
       return {[`position-${this.position}`]: true}
     }
   },
@@ -73,6 +73,7 @@ export default {
     },
     close() {
       this.$el.remove()
+      this.$emit('close')
       this.$destroy()
     },
     obClickClose() {
@@ -88,7 +89,18 @@ export default {
 $font-size: 14px;
 $toast-min-height: 40px;
 $toast-bg: rgba(0, 0, 0, 0.74);
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
 .toast {
+  animation: fade-in 250ms;
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
@@ -107,24 +119,24 @@ $toast-bg: rgba(0, 0, 0, 0.74);
   .close {
     display: inline-block;
     color: #fff;
-    padding-left:16px;
+    padding-left: 16px;
     flex-shrink: 0;
   }
   .line {
     border: .5px solid #666;
     margin-left: 16px;
   }
-  &.position-top{
+  &.position-top {
     top: 0;
     transform: translateX(-50%);
   }
-  &.position-bottom{
+  &.position-bottom {
     bottom: 0;
     transform: translateX(-50%);
   }
-  &.position-middle{
+  &.position-middle {
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
   }
 }
 </style>
