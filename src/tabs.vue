@@ -5,29 +5,40 @@
 </template>
 
 <script>
-export  default {
-  name:'GuluTabs',
-  props:{
-    selected:{
-      type:String,
-      required:true,
+import Vue from 'vue'
+export default {
+  name: 'GuluTabs',
+  props: {
+    selected: {
+      type: String,
+      required: true,
     },
-    direction:{
-      type:String,
-      default:'horizontal',
-      validator(value){
-        return ['horizontal','vertical'].indexOf(value)>=0
+    direction: {
+      type: String,
+      default: 'horizontal',
+      validator(value) {
+        return ['horizontal', 'vertical'].indexOf(value) >= 0
       }
     }
   },
-  create(){
-    this.$emit('update:selected','xxx')
+  data() {
+    return {
+      eventBus: new Vue()
+    }
+  },
+  provide() {
+    return {
+      eventBus: this.eventBus
+    }
+  },
+  mounted() {
+    this.eventBus.$emit('update:selected',this.selected)
   }
 }
 </script>
 
 
 <style lang="scss" scoped>
-.tabs{
+.tabs {
 }
 </style>
