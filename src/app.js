@@ -5,11 +5,20 @@ import ButtonGroup from './button-group'
 import Input from './input'
 import Row from './row'
 import Col from './col'
-
+import Footer from './footer'
+import Content from './content'
+import Layout from './layout'
+import Header from './header'
+import Sider from './sider'
 // 全局注册组件不推荐
 // Vue.component('g-button', Button)
 //Vue.component('g-icon', Icon)
 // Vue.component('g-button-group', ButtonGroup)
+Vue.component('g-footer',Footer)
+Vue.component('g-content',Content)
+Vue.component('g-layout',Layout)
+Vue.component('g-header',Header)
+Vue.component('g-sider',Sider)
 
 new Vue({
     el: '#app',

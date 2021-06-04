@@ -57,6 +57,10 @@
             background-color: grey;
             border: 1px solid red;
         }
+        .demo1{
+            border: 1px solid #666;
+            min-height: 100px;
+        }
     </style>
 </head>
 <body>
@@ -96,51 +100,10 @@
 
     </div>
 
-    <!-- 栅格系统 -->
+
     <br>
 
-    <div style="border: 1px solid black;">
-        <g-row gutter="20">
-            <g-col>1123</g-col>
-            <g-col>2321</g-col>
-        </g-row>
-
-        <g-row gutter="20">
-            <g-col>1123</g-col>
-            <g-col>2321</g-col>
-            <g-col>1123</g-col>
-            <g-col>2321</g-col>
-        </g-row>
-
-        <g-row gutter="20">
-            <g-col span="4">1123</g-col>
-            <g-col span="20">2321</g-col>
-        </g-row>
-
-        <g-row gutter="20">
-            <g-col span="4">1123</g-col>
-            <g-col span="2" offset="2">2321</g-col>
-            <g-col span="13" offset="3">2321</g-col>
-        </g-row>
-
-        <g-row>
-            <g-col span="4">1123</g-col>
-            <g-col span="20">2321</g-col>
-        </g-row>
-
-        <g-row>
-            <g-col span="4">1123</g-col>
-            <g-col span="20" offset="2">2321</g-col>
-        </g-row>
-
-        <g-row>
-            <g-col span="4">1123</g-col>
-            <g-col span="2" offset="2">2321</g-col>
-            <g-col span="13" offset="3">2321</g-col>
-        </g-row>
-
-    </div>
-    <!--    响应式-->
+    <!--  栅格系统  响应式-->
     <div style="border: 1px solid black;">
         <g-row>
             <g-col class="demo" :span="24" :ipad="{span:12}" :narrow-Pc="{span:8}">
@@ -157,6 +120,17 @@
             </g-col>
         </g-row>
     </div>
+    <br>
+    <!--    layout布局-->
+    <g-layout>
+        <g-header class="demo1">header</g-header>
+        <g-layout>
+            <g-sider class="demo1">sider</g-sider>
+            <g-content class="demo1">content</g-content>
+        </g-layout>
+        <g-content class="demo1">content</g-content>
+        <g-footer class="demo1">footer</g-footer>
+    </g-layout>
 </div>
 <script src="./src/app.js"></script>
 </body>
