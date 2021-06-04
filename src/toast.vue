@@ -44,7 +44,7 @@ export default {
       type: String,
       default: 'top',
       validator(value) {
-        return ['top', 'button', 'middle'].indexOf(value) >= 0
+        return ['top', 'bottom', 'middle'].indexOf(value) >= 0
       }
     }
   },
@@ -150,7 +150,7 @@ $toast-bg: rgba(0, 0, 0, 0.74);
   font-size: $font-size;
   min-height: $toast-min-height;
   background: $toast-bg;
-  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.50);
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.50);
   border-radius: 4px;
   color: #fff;
   padding: 0 16px;

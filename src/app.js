@@ -12,50 +12,53 @@ import Header from './header'
 import Sider from './sider'
 import Toast from "./toast";
 import plugin from './plugin'
-Vue.component('g-button',Button)
-Vue.component('g-icon',Icon)
-Vue.component('g-button-group',ButtonGroup)
-Vue.component('g-input',Input)
-Vue.component('g-row',Row)
-Vue.component('g-col',Col)
-Vue.component('g-footer',Footer)
-Vue.component('g-content',content)
-Vue.component('g-layout',Layout)
-Vue.component('g-header',Header)
-Vue.component('g-sider',Sider)
-Vue.component('g-toast',Toast)
+
+Vue.component('g-button', Button)
+Vue.component('g-icon', Icon)
+Vue.component('g-button-group', ButtonGroup)
+Vue.component('g-input', Input)
+Vue.component('g-row', Row)
+Vue.component('g-col', Col)
+Vue.component('g-footer', Footer)
+Vue.component('g-content', content)
+Vue.component('g-layout', Layout)
+Vue.component('g-header', Header)
+Vue.component('g-sider', Sider)
+Vue.component('g-toast', Toast)
 Vue.use(plugin)
 new Vue({
-    el:'#app',
-    data(){
+    el: '#app',
+    data() {
         return {
-            loading1:true,
-            loading2:true,
-            message:'hi'
+            loading1: true,
+            loading2: true,
+            message: 'hi'
         }
     },
-    methods:{
-        inputChange(e){
+    methods: {
+        inputChange(e) {
             console.log(e.target.value)
         },
-        showToast1(){
+        showToast1() {
             this.showToast('top')
         },
-        showToast2(){
+        showToast2() {
             this.showToast('middle')
-        },showToast3(){
+        },
+        showToast3() {
             this.showToast('bottom')
         },
-        showToast(position){
-            this.$toast('<strong>你的智商需要充值</strong>',{
+        showToast(position) {
+            this.$toast('<strong>你的智商需要充值</strong>', {
                 enableHtml: true,
                 closeButton: {
-                    text:'已充值',
-                    callback(){
+                    text: '已充值',
+                    callback() {
                         console.log('他说已经充值智商了')
                     }
                 },
-                position:position
+                autoClose: 2,
+                position: position.trim()
             })
         }
     }
