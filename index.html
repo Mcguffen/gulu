@@ -165,6 +165,58 @@
             </g-tabs-pane>
         </g-tabs-body>
     </g-tabs>
+    <br>
+    <pre>
+
+    </pre>
+<!--popover-->
+    <g-popover position="top">
+        <template slot="content" slot-scope="{close}">
+            <div>popover内容popover内容popover内容popover内容popover内容popover内容</div>
+            <g-button @click="close">关闭</g-button>
+        </template>
+        <template slot="trigger">
+            <g-button>click me</g-button>
+        </template>
+    </g-popover>
+    <g-popover position="bottom">
+        <template slot="content">
+            <div>popover内容popover内容popover内容popover内容popover内容popover内容popover内容popover内容popover内容</div>
+        </template>
+        <template slot="trigger">
+            <g-button>click me</g-button>
+        </template>
+    </g-popover>
+    <g-popover position="left">
+        <template slot="content">
+            <div>popover内容popover内容popover内容popover内容popover内容popover内容popover内容popover内容popover内容</div>
+        </template>
+        <template slot="trigger">
+            <g-button>click me</g-button>
+        </template>
+    </g-popover>
+    <g-popover position="right">
+        <template slot="content">
+            <div>popover内容popover内容popover内容popover内容popover内容popover内容popover内容popover内容popover内容</div>
+        </template>
+        <template slot="trigger">
+            <g-button>click me</g-button>
+        </template>
+    </g-popover>
+<!--hover就触发的-->
+    <g-popover position="top" trigger="hover">
+        <template slot="content">
+            <div>popover内容 <strong>粗字体</strong></div>
+        </template>
+        <template slot="trigger">
+            <g-button>click me</g-button>
+        </template>
+    </g-popover>
+    <pre>
+
+
+    </pre>
+
 
 </div>
 <script src="./src/app.js"></script>
