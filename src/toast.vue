@@ -146,7 +146,6 @@ $toast-bg: rgba(0, 0, 0, 0.74);
   }
 }
 .toast {
-  animation: slide-up 250ms;
   font-size: $font-size;
   min-height: $toast-min-height;
   background: $toast-bg;
