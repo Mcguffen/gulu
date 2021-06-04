@@ -54,15 +54,15 @@
 </head>
 <body>
 <div id="app">
-<!--    <div class="box">-->
-<!--        <g-input value="法外狂徒张三" disabled></g-input>-->
-<!--        <g-input value="法外狂徒李四"></g-input>-->
-<!--        <g-input value="法外狂徒王五" readonly></g-input>-->
-<!--    </div>-->
+   <div class="box">
+        <g-input value="法外狂徒张三" disabled></g-input>
+        <g-input value="法外狂徒李四"></g-input>
+        <g-input value="法外狂徒王五" readonly></g-input>
+    </div>
 
-<!--    <div class="box">-->
-<!--        <g-input value="王" error="姓名不可少于2个字符"></g-input>-->
-<!--    </div>-->
+    <div class="box">
+        <g-input value="王" error="姓名不可少于2个字符"></g-input>
+    </div>
 
     <div class="box">
         <g-input  v-model="message"></g-input>
@@ -89,6 +89,12 @@
 
     </div>
 
+    <!-- 栅格系统 -->
+    <g-row>
+        <g-col></g-col>
+        <g-col></g-col>
+    </g-row>
+    
 </div>
 <script src="./src/app.js"></script>
 </body>

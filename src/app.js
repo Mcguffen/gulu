@@ -3,6 +3,9 @@ import Button from './button'
 import Icon from './icon'
 import ButtonGroup from './button-group'
 import Input from './input'
+import Row from './row'
+import Col from './col'
+
 // 全局注册组件不推荐
 // Vue.component('g-button', Button)
 //Vue.component('g-icon', Icon)
@@ -20,7 +23,12 @@ new Vue({
         "g-button": Button,
         "g-icon": Icon,
         "g-button-group": ButtonGroup,
-        "g-input": Input
+        "g-input": Input,
+        "g-row": Row,
+        "g-col": Col
+    },
+    mounted(){
+        console.log(Col)
     },
     created() {
         setTimeout(() => {
